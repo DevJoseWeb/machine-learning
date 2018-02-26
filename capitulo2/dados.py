@@ -3,11 +3,12 @@ import csv
 def carregar_acessos():
     X = []
     Y = []
-
+    
+    #Carrega o CSV para memória
     arquivo = open('acesso.csv', 'r')
     leitor = csv.reader(arquivo)
     next(leitor)
-
+  
     for home, como_funciona, contato, comprou in leitor:
 
         dado = [int(home),int(como_funciona)
